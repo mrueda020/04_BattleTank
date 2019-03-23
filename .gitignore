@@ -7,11 +7,13 @@
 */Intermediate
 */Saved
 */.vs
+
+##########################
+# Unreal Content Files   #
+##########################
 BattleTank/Content/StarterContent/
 BattleTank/Content/KiteDemo
 BattleTank/Content/Textures
-
-#BuildingEscape/Content/StarterContent/#
 
 ######################
 # VS Generated Files #
