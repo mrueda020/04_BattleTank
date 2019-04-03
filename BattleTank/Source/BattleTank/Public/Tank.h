@@ -49,4 +49,7 @@ private:
 	//Barrel reference used to spawn a projectile
 	UTankBarrel * Barrel = nullptr;
 
+	float ReloadTimeInSeconds = 3;
+
+	double LastFireTime = 0;
 };
