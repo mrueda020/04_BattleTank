@@ -28,17 +28,20 @@ public:
 	void Fire();
 
 protected:
-	UTankAimingComponent * TankAimimingComponent = nullptr;
+	UTankAimingComponent * TankAimingComponent = nullptr;
 
 private:
 	// Sets default values for this pawn's properties
 	ATank();
 	
-	UPROPERTY(EditAnywhere, Category = Firing)
+	UPROPERTY(EditDefaultsOnly, Category = Firing)
 	float LaunchSpeed = 4000; //TODO find sensible default
 
-	UPROPERTY(EditAnywhere, Category = Setup)
+	UPROPERTY(EditDefaultsOnly, Category = Setup)
 	TSubclassOf<AProjectile> ProjectileBlueprint;
+
+	UPROPERTY(EditDefaultsOnly, Category = Setup)
+	float ReloadTimeInSeconds = 3;
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -48,8 +51,7 @@ private:
 	
 	//Barrel reference used to spawn a projectile
 	UTankBarrel * Barrel = nullptr;
-
-	float ReloadTimeInSeconds = 3;
+	
 
 	double LastFireTime = 0;
 };
