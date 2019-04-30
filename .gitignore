@@ -11,10 +11,9 @@
 ##########################
 # Unreal Content Files   #
 ##########################
-BattleTank/Content/StarterContent/
+BattleTank/Content/StarterContent
 BattleTank/Content/KiteDemo
 BattleTank/Content/Textures
-
 ######################
 # VS Generated Files #
 ######################
