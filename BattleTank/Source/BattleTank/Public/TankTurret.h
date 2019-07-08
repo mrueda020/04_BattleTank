@@ -8,7 +8,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "TankTurret.generated.h"
 /**
- * 
+ *  It is used to set maximum driving force and to apply forces to the tank
  */
 UCLASS(meta = (BlueprintSpawnableComponent))
 class BATTLETANK_API UTankTurret : public UStaticMeshComponent
