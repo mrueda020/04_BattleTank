@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/ActorComponent.h"
+#include "GameFramework/Actor.h"
 #include "Components/StaticMeshComponent.h"
 #include "TankTrack.generated.h"
 
@@ -20,6 +22,6 @@ public:
 		
    //Max force per track in newtons
 		UPROPERTY(EditDefaultsOnly)
-		float TrackMaxDrivingForce=40000;	
+		float TrackMaxDrivingForce = 400000000;	
 
 };
