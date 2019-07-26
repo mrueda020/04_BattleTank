@@ -4,7 +4,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
-class UTankTurret;
+//class UTankTurret;
 class UTankAimingComponent;
 class UTankMovementComponent;
 class UTankBarrel;
