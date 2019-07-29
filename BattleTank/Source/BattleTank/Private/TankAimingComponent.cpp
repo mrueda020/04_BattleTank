@@ -48,7 +48,8 @@ void UTankAimingComponent::Initialize(UTankBarrel * BarrelToSet, UTankTurret * T
 
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection){
 	//if (!Barrel || !Turret) { return; }
-	if (ensure(Barrel) || ensure(Turret)) { return; }
+	if (!ensure(Barrel) || !ensure(Turret)) { return; }
+	UE_LOG(LogTemp, Warning, TEXT("I am here"));
 	//Work.out difference between curretn barrel rotation and aimdirection
 	auto BarrelRotator = Barrel->GetForwardVector().Rotation(); //forward vector i x vector
 	auto AimRotator = AimDirection.Rotation();
