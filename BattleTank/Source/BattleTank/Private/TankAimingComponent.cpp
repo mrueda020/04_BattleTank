@@ -15,7 +15,7 @@ UTankAimingComponent::UTankAimingComponent()
 	// ...
 }
 
-void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed) {
+void UTankAimingComponent::AimAt(FVector HitLocation) {
 	if (!ensure(Barrel)) { return; }
 
 	FVector OutLaunchVelocity;
@@ -47,10 +47,9 @@ void UTankAimingComponent::Initialize(UTankBarrel * BarrelToSet, UTankTurret * T
 
 
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection){
-	//if (!Barrel || !Turret) { return; }
 	if (!ensure(Barrel) || !ensure(Turret)) { return; }
 	UE_LOG(LogTemp, Warning, TEXT("I am here"));
-	//Work.out difference between curretn barrel rotation and aimdirection
+	//Work-out difference between curretn barrel rotation and aimdirection
 	auto BarrelRotator = Barrel->GetForwardVector().Rotation(); //forward vector i x vector
 	auto AimRotator = AimDirection.Rotation();
 	auto DeltaRotator = AimRotator - BarrelRotator;
