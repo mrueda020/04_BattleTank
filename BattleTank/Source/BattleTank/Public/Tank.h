@@ -6,7 +6,6 @@
 #include "Tank.generated.h"
 //class UTankTurret;
 class UTankAimingComponent;
-class UTankMovementComponent;
 class UTankBarrel;
 class AProjectile;
 UCLASS()
@@ -22,21 +21,18 @@ public:
 protected:
 	UPROPERTY(BlueprintReadOnly)
 	UTankAimingComponent * TankAimingComponent = nullptr;
-
-	UPROPERTY(BlueprintReadOnly)
-	UTankMovementComponent * TankMovementComponent = nullptr;
-
 private:
 	// Sets default values for this pawn's properties
 	ATank();
 	
+	//TODO remove once firing is moved to aiming component
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 	float LaunchSpeed = 4000; //TODO find sensible default
 
 	UPROPERTY(EditDefaultsOnly, Category = "Setup")
 	TSubclassOf<AProjectile> ProjectileBlueprint;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 	float ReloadTimeInSeconds = 3;
 
 	// Called when the game starts or when spawned

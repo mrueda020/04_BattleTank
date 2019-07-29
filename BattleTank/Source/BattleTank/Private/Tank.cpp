@@ -3,7 +3,7 @@
 #include "Projectile.h"
 #include "TankBarrel.h"
 #include "TankAimingComponent.h"
-#include "TankMovementComponent.h"
+
 // Sets default values
 ATank::ATank()
 {
@@ -18,13 +18,11 @@ void ATank::BeginPlay()
 	
 }
 
-
 void ATank::AimAt(FVector HitLocation){
 	if (!ensure(TankAimingComponent)) { return; }
 	TankAimingComponent->AimAt(HitLocation,LaunchSpeed);
 	
 }
-
 
 void ATank::Fire() {
 	if (!ensure(Barrel)) { return; }
