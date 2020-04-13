@@ -106,7 +106,6 @@ void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection){
 }
 
 void UTankAimingComponent::Fire() {
-	
 	if (FiringState == EFiringState::Locked || FiringState == EFiringState::Aiming) {
 		if (!ensure(Barrel)) { return; }
 		if (!ensure(ProjectileBlueprint)) { return; }
